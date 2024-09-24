@@ -64,7 +64,7 @@ const Home = () => {
         style={{
           left: `${cursorPosition.x}px`,
           top: `${cursorPosition.y}px`,
-          transform: 'translate(-50%, -50%)', // Center the cursor
+          transform: 'translate(-50%, -50%)', 
         }}
       />
       <img src="/images/name-logo.svg" alt="logo images" className="absolute w-[100vw] md:w-[40vw]" />
