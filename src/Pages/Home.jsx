@@ -68,7 +68,7 @@ const Home = () => {
         }}
       />
       <img src="/images/name-logo.svg" alt="logo images" className="absolute w-[70vw] md:w-[40vw]" />
-      <div className="container flex md:justify-between md:items-center z-30 justify-center items-center">
+      <div className="container flex justify-between items-center z-30">
         <div className="right_hero">
           <h1 className="text-4xl font-semibold md:text-7xl text-white">Akash Biswas</h1>
           <p className="my-10 h-10 text-2xl w-max pr-1 text-grey font-semibold md:text-3xl md:font-normal">
