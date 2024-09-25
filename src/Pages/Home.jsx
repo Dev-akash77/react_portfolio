@@ -58,20 +58,20 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="cc h-screen w-screen relative">
+    <div className="cc h-screen w-screen relative bg-sub_black">
       <div 
-        className="cursur absolute bg-black rounded-full w-4 h-4 transition-all duration-150 hidden md:block"
+        className="cursur absolute bg-white rounded-full w-10 h-10 hidden md:block "
         style={{
           left: `${cursorPosition.x}px`,
           top: `${cursorPosition.y}px`,
           transform: 'translate(-50%, -50%)', 
         }}
       />
-      <img src="/images/name-logo.svg" alt="logo images" className="absolute w-[100vw] md:w-[40vw]" />
-      <div className="container flex justify-between items-center z-30">
+      <img src="/images/name-logo.svg" alt="logo images" className="absolute w-[70vw] md:w-[40vw]" />
+      <div className="container flex md:justify-between md:items-center z-30 justify-center items-center">
         <div className="right_hero">
-          <h1 className="text-4xl font-semibold md:7xl">Akash Biswas</h1>
-          <p className="my-10 h-10 text-2xl w-max pr-1 text-black md:text-grey font-semibold md:text-3xl md:font-normal">
+          <h1 className="text-4xl font-semibold md:text-7xl text-white">Akash Biswas</h1>
+          <p className="my-10 h-10 text-2xl w-max pr-1 text-grey font-semibold md:text-3xl md:font-normal">
             {typeEffect}
             <Cursor cursorStyle="|" />
           </p>
@@ -85,13 +85,16 @@ const Home = () => {
               key={index} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-3xl text-grey hover:text-black duration-150"
+              className="text-4xl text-grey hover:text-white duration-150 hover:scale-105"
             >
               {cur.icon}
             </a>
           ))}
         </div>
       </div>
+        <div className="lets_work_btn absolute bottom-10">
+          <Button text={`Latest Works`}/>
+        </div>
     </div>
   );
 };

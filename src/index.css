@@ -10,9 +10,10 @@
   --orange:#ff710f;
 } */
 :root {
-  --black: #201f21; /* Dark primary color for text and backgrounds */
+  --black: #000000; /* Dark primary color for text and backgrounds */
+  --sub_black: #111111;
   --blue: #007bff; /* Bright blue for buttons and links */
-  --grey: #909090; /* Soft grey for subtle backgrounds and accents */
+  --grey: #b0b2c3; /* Soft grey for subtle backgrounds and accents #909090 */
   --white: #fff; /* Clean white for backgrounds and light text */
   --orange: #ff6f61; /* Vibrant orange for highlights and hover effects */
   --golden: #ffc107;
@@ -20,10 +21,10 @@
 .container {
   width: 85%;
 }
-body{
+body {
   overflow-x: hidden;
 }
-html{
+html {
   overflow-x: hidden;
 }
 .cc {
@@ -32,61 +33,26 @@ html{
   justify-content: center;
   align-items: center;
 }
-/* From Uiverse.io by Allyhere */
-.btn-donate {
-  --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: #bfcfe7;
-  --btn-bg-2: #525ceb;
-  --btn-bg-color: #f8edff;
-  --radii: 0.5em;
+.btn{
+  background: -webkit-gradient(linear, right top, left top, from(#1595b6), to(rgba(31, 38, 103, 0.9)));
+  background: linear-gradient(to left, #1595b6, rgba(31, 38, 103, 0.9));
+  background-color: #4595eb;
+  border-radius: 5px;
+  padding: 0.6em 1.25em;
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
   cursor: pointer;
-  padding: 0.4em 0.6em;
-  min-width: 120px;
-  min-height: 44px;
-  font-size: var(--size, 1.5rem);
-  font-weight: 500;
-  transition: 0.8s;
-  background-size: 280% auto;
-  background-image: linear-gradient(
-    325deg,
-    var(--btn-bg-2) 0%,
-    var(--btn-bg-1) 55%,
-    var(--btn-bg-2) 90%
-  );
-  border: none;
-  border-radius: var(--radii);
-  color: var(--btn-bg-color);
+  color: var(--white);
+  transition: .3s ease;
 }
-.btn-donate:hover {
-  background-position: right top;
+.btn:hover{
+  transform: scale(1.05);
 }
-
-.btn-donate:is(:focus, :focus-visible, :active) {
-  outline: none;
-  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .btn-donate {
-    transition: linear;
-  }
-}
-
-/******************************************************************** main hero aection ***************************************************************/
 .cursur{
-  position: absolute;
-  height: 15rem;
-  width: 10rem;
-  background-color: var(--blue);
-  filter: blur(13rem);
-  transition: .5s ease;
-  animation: rotate 1s linear infinite;
-}
-@keyframes rotate {
-  to {
-    transform: rotate(0deg);
-  }
-  from {
-    transform: rotate(360deg);
-  }
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--black);
+  border-radius: 50%;
+  transition: .3s linear;
 }
