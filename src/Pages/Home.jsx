@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Button from "../UI/Button";
-import { FaGithub, FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaGithub,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { FaArrowDownLong } from "react-icons/fa6";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const Home = () => {
@@ -34,7 +40,12 @@ const Home = () => {
   ];
 
   const [typeEffect] = useTypewriter({
-    words: ['Fullstack Developer', 'JavaScript Developer', 'Android Developer', 'Software Developer'],
+    words: [
+      "Fullstack Developer",
+      "JavaScript Developer",
+      "Android Developer",
+      "Software Developer",
+    ],
     loop: {},
     typeSpeed: 30,
     deleteSpeed: 10,
@@ -59,18 +70,24 @@ const Home = () => {
 
   return (
     <div className="cc h-screen w-screen relative bg-sub_black">
-      <div 
+      <div
         className="cursur absolute bg-white rounded-full w-10 h-10 hidden md:block "
         style={{
           left: `${cursorPosition.x}px`,
           top: `${cursorPosition.y}px`,
-          transform: 'translate(-50%, -50%)', 
+          transform: "translate(-50%, -50%)",
         }}
       />
-      <img src="/images/name-logo.svg" alt="logo images" className="absolute w-[80vw] md:w-[40vw]" />
+      <img
+        src="/images/name-logo.svg"
+        alt="logo images"
+        className="absolute w-[80vw] md:w-[40vw]"
+      />
       <div className="container flex justify-between items-center z-30">
         <div className="right_hero">
-          <h1 className="text-4xl font-semibold md:text-7xl text-white">Akash Biswas</h1>
+          <h1 className="text-4xl font-semibold md:text-7xl text-white">
+            Akash Biswas
+          </h1>
           <p className="my-10 h-10 text-2xl w-max pr-1 text-golden font-semibold md:text-3xl md:font-normal">
             {typeEffect}
             <Cursor cursorStyle="|" />
@@ -80,11 +97,11 @@ const Home = () => {
 
         <div className="social_icon flex flex-col gap-7 left_hero">
           {social.map((cur, index) => (
-            <a 
-              href={cur.link} 
-              key={index} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={cur.link}
+              key={index}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-4xl text-grey hover:text-white duration-150 hover:scale-105"
             >
               {cur.icon}
@@ -92,9 +109,10 @@ const Home = () => {
           ))}
         </div>
       </div>
-        <div className="lets_work_btn absolute bottom-10">
-          <Button text={`Latest Works`}/>
-        </div>
+      <div className="lets_work_btn absolute bottom-10 flex flex-col items-center justify-center group">
+        <Button text={`Latest Works`} />
+        <FaArrowDownLong className="text-white text-3xl transform transition-transform duration-300 group-hover:scale-125 mt-3 w-max" />
+      </div>
     </div>
   );
 };

@@ -1,0 +1,62 @@
+[
+    {
+        "name":"Country App",
+        "title":"Discover Countries",
+        "id":"Qm3%g6DP+k6@H(J",
+        "link":"https://akash-country.netlify.app/",
+        "technology":["HTML","CSS","JavaScript","Web api","github"],
+        "description":"Country Explorer is a web app that provides quick insights into countries, including population and region details.",
+        "color":"ff0000",
+        "image":"./images/country_laptop.svg"
+    },
+    {
+        "name":"DevDetective",
+        "title":"Find your favourite developer",
+        "id":"Gz3::Rc(%Q44_2S",
+        "link":"https://dev-profile-akash.netlify.app/",
+        "technology":["HTML","CSS","JavaScript","Web api","github","Figma"],
+        "description":"Akash's Developer Profile highlights personal projects, skills, and accomplishments in web development, offering a portfolio view of expertise and creativity.",
+         "color":"0079ff",
+         "image":"./images/dev_profile.svg"
+    },
+    {
+        "name":"TOYTO",
+        "title":"Ecommerce Application",
+        "id":"So5?+πp©cx+Qvxe",
+        "link":"https://toyto.netlify.app/",
+        "technology":["React","CSS","JavaScript","Custom Api","github","Context Api"],
+        "description":"TOYTO is an ecommerce platform offering a seamless shopping experience for a wide variety of toys and products. Explore, add to cart, and enjoy a user-friendly interface designed for easy navigation and purchases.",
+        "color":"db4444",
+        "image":"./images/toyto.svg"
+    },
+    {
+        "name":"Pokémon Explorer",
+        "title":"Discover Your Favorite Pokémon",
+        "id":"Yj9!OLlZj)πmzG)",
+        "link":"https://pokemon-akash.netlify.app/",
+        "technology":["React","CSS","JavaScript","Complex Api","Designing"],
+        "description":"Pokémon Explorer is a fun and interactive web app where users can search and explore various Pokémon, learning about their abilities, types, and stats.",
+        "color":"00d559",
+        "image":"./images/pokemon.svg"
+    },
+    {
+        "name":"WappGPT",
+        "title":"AI Assistant",
+        "id":"Nm6%A3@usLKi¶L(",
+        "link":"https://wappgpt.netlify.app/",
+        "technology":["React","CSS","Complex Api","Context Api","AI"],
+        "description":"WappGPT is an AI-powered chatbot designed to engage in intelligent conversations, answer questions, and assist with tasks using advanced natural language processing.",
+        "color":"4361ee",
+        "image":"./images/chatbot.svg"
+    },
+    {
+        "name":"Weather App",
+        "title":"Acces Your Location",
+        "id":"Sm4)X-ONyYeE2√Z",
+        "link":"https://weather-akash.netlify.app/",
+        "technology":["Html","tailwind","Complex Api","JavaScript"],
+        "description":"A weather App with 6 days forcast data. Its a mordern Weather app with current location function and real time data",
+        "color":"413f99",
+        "image":"./images/weatherapp.svg"
+    }
+]

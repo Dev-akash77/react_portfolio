@@ -33,8 +33,14 @@ html {
   justify-content: center;
   align-items: center;
 }
-.btn{
-  background: -webkit-gradient(linear, right top, left top, from(#1595b6), to(rgba(31, 38, 103, 0.9)));
+.btn {
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#1595b6),
+    to(rgba(31, 38, 103, 0.9))
+  );
   background: linear-gradient(to left, #1595b6, rgba(31, 38, 103, 0.9));
   background-color: #4595eb;
   border-radius: 5px;
@@ -44,15 +50,79 @@ html {
   position: relative;
   cursor: pointer;
   color: var(--white);
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
-.btn:hover{
+.btn:hover {
   transform: scale(1.05);
 }
-.cursur{
+.cursur {
   width: 4rem;
   height: 4rem;
   background-color: var(--black);
   border-radius: 50%;
-  transition: .3s linear;
+  transition: 0.3s linear;
+}
+.second_col {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+.first_col {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+/* .project_des {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  place-content: center;
+} */
+.rtl a img {
+  filter: drop-shadow(0.5rem 0.5rem 0.8rem rgba(0, 0, 0, 0.5));
+}
+.project_popup {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.project_popup::after {
+  position: absolute;
+  content: "";
+  background-color: var(--dynamic-color); /* Uses the dynamically set color */
+  height: 0.7rem;
+  width: 0.7rem;
+  bottom: -0.3rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg); /* Diamond shape */
+}
+
+@keyframes bounce-custom {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+.rtl_img:hover .project_popup {
+  animation: bounce-custom 0.5s ease-in-out;
+  top: -4.2rem;
+}
+@media (max-width: 650px) {
+  .first_col {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .second_col {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .rtl_img {
+    pointer-events: none;
+  }
+  .project_popup {
+    bottom: -2rem;
+    pointer-events: none;
+  }
+  .project_popup::after {
+    display: none;
+  }
 }
