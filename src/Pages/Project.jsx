@@ -21,7 +21,7 @@ const Project = () => {
                   }`}
                 >
                   <a
-                    href={cur.link}
+                   href={cur.link}
                     target="_blank"
                     className="z-40 relative flex items-center justify-center rtl_img w-full md:w-max flex-col md:flex-row"
                     style={{
@@ -33,13 +33,12 @@ const Project = () => {
                       alt="country app"
                       className="w-[26rem] hover:scale-110 duration-150 z-30"
                     />
-                    <a
+                    <p
                       className="md:absolute project_popup text-white px-5 py-2 rounded-md flex gap-2 items-center justify-center md:my-0 my-5"
-                      href={cur.link}
                       style={{ backgroundColor: `#${cur.color}` }}
                     >
                       {cur.name} <FaExternalLinkAlt />
-                    </a>
+                    </p>
                   </a>
 
                   {/* Inline style for dynamic background color */}

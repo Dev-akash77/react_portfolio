@@ -115,12 +115,8 @@ html {
     grid-row: 1/2;
     grid-column: 2/3;
   }
-  .rtl_img {
-    pointer-events: none;
-  }
   .project_popup {
     bottom: -2rem;
-    pointer-events: none;
   }
   .project_popup::after {
     display: none;
