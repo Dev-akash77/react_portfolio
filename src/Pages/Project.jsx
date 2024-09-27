@@ -4,7 +4,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 const Project = () => {
   return (
     <div className="mb-[8rem] cc">
-      <div className="border-2 border-t-0 border-blue text-4xl p-3 text-blue font-semibold rounded-md">
+      <div className=" md:border-2 md:border-t-0 md:border-blue text-4xl p-3 text-blue font-semibold rounded-md">
         Latest Works
       </div>
       <div className="container relative flex items-center justify-center">
