@@ -122,3 +122,46 @@ html {
     display: none;
   }
 }
+.main_r_b {
+  animation: rtd 10s linear infinite;
+}
+@keyframes rtd {
+  to {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(-360deg);
+  }
+}
+.alsk {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+}
+.bglight {
+  height: 10rem;
+  width: 9.5rem;
+  border-radius: 50%;
+  filter: blur(10rem);
+  background-color: var(--blue);
+  right: 10rem;
+  animation: rtd 10s linear infinite;
+}
+
+@media (max-width: 770px) {
+  .alsk {
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--white);
+    font-size: 2rem;
+  }
+}
+@media (max-width: 450px) {
+  .alsk {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: var(--white);
+    font-size: 2rem;
+  }
+}

@@ -99,6 +99,8 @@ const Project = () => {
           })}
         </div>
         <div className="line_project bg-blue w-[.1rem] h-full absolute top-0 hidden md:block"></div>
+        <div className="line_project bg-blue w-[.1rem] h-[15rem] absolute -bottom-[8rem] hidden md:block"></div>
+      <div className="absolute -bottom-[8rem] md:border-2 md:border-blue text-4xl p-3 text-blue font-semibold rounded-md bg-white">My Skills</div>
       </div>
     </div>
   );
