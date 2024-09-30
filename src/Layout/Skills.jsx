@@ -6,8 +6,8 @@ const Skills = () => {
   return (
     <div className=" mt-5 cc">
       <div className="container cc relative">
-        <div className="py-16 overflow-hidden w-full cc">
-          <div className="relative rounded-full cc w-[20rem] h-[20rem] md:w-[33rem] md:h-[33rem] main_r_b border-4 border-grey">
+        <div className="py-16 overflow-hidden w-screen cc">
+          <div className="relative rounded-full cc w-[17rem] h-[17rem] md:w-[33rem] md:h-[33rem] main_r_b border-4 border-grey">
             <div className="absolute cc alsk text-7xl -top-9 md:-top-14 z-30 bg-white">
               <DiMongodb className="text-green-700" />
             </div>

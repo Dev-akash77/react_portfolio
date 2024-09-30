@@ -3,6 +3,7 @@ import Nav from './Pages/Nav'
 import Home from './Pages/Home'
 import Project from './Pages/Project'
 import Skills from './Layout/Skills'
+import Technology from './Layout/Technology'
 const App = () => {
   return (
     <div className='bg-white'>
@@ -10,6 +11,7 @@ const App = () => {
       <Home />
       <Project />
       <Skills />
+      <Technology />
     </div>
   )
 }
