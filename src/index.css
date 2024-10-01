@@ -13,6 +13,9 @@
 html {
   font-family: "Work Sans", sans-serif;
 } */
+html {
+  scroll-behavior: smooth;
+} 
 :root {
   --black: #000000; /* Dark primary color for text and backgrounds */
   --sub_black: #111111;
@@ -60,11 +63,12 @@ html {
   transform: scale(1.05);
 }
 .cursur {
-  width: 4rem;
-  height: 4rem;
-  background-color: var(--black);
+  width: 2rem;
+  height: 2rem;
+  background-color:var(--blue);
   border-radius: 50%;
   transition: 0.3s linear;
+  filter: blur(.2rem);
 }
 .second_col {
   grid-row: 1/2;

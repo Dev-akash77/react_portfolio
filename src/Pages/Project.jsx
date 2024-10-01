@@ -1,6 +1,7 @@
 import React from "react";
 import projects from "../api/project.json";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 const Project = () => {
   return (
     <div className="mb-[8rem] cc">
@@ -8,10 +9,13 @@ const Project = () => {
         Latest Works
       </div>
       <div className="container relative flex items-center justify-center">
-        <div className="all_projects_main flex flex-col md:gap-[2rem] gap-5">
+        <div className="all_projects_main flex flex-col md:gap-[2rem] gap-5 relative">
           {projects.map((cur, index) => {
             return (
-              <div
+              <motion.div
+              initial={{opacity:0,y:70}}
+              whileInView={{opacity:1, y:0}}
+              transition={{duration:1}}
                 className="project_des gap-y-4 md:gap-0 grid grid-cols-1 md:grid-cols-2 md:grid-rows-1 mt-[2rem]"
                 key={cur.id}
               >
@@ -52,14 +56,14 @@ const Project = () => {
                   ></div>
 
                   {/* Inline style for dynamic border color */}
-                  <a
-                    className={`absolute border-2 bg-white z-50 h-[1rem] w-[1rem] rounded-full cursor-pointer -right-[.5rem] hover:scale-125 duration-150 hidden md:block ${
+                  {/* <a
+                    className={`absolute border-2 bg-white z-40 h-[1rem] w-[1rem] rounded-full cursor-pointer -right-[.5rem] hover:scale-125 duration-150 hidden md:block ${
                       index % 2 != 0 && "-left-[.5rem]"
                     }`}
                     style={{ borderColor: `#${cur.color}` }}
                     href={cur.link}
                     target="_blank"
-                  ></a>
+                  ></a> */}
                 </div>
 
                 <div
@@ -94,7 +98,7 @@ const Project = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

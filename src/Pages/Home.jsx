@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "../UI/Button";
 import {
   FaGithub,
@@ -9,6 +9,7 @@ import {
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaArrowDownLong } from "react-icons/fa6";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const social = [
@@ -68,47 +69,121 @@ const Home = () => {
     };
   }, []);
 
+  const scrollAnim = useRef(null);
+
+  // Animation variants for each line
+  const lineVariants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: (index) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        delay: index * 0.5,
+        type: "spring",
+        stiffness: 80,
+        damping: 10,
+      },
+    }),
+  };
+
   return (
-    <div className="cc h-screen w-screen relative bg-sub_black">
+    <div
+      className="cc h-screen w-screen relative bg-sub_black"
+      ref={scrollAnim}
+    >
       <div
-        className="cursur absolute bg-white rounded-full w-10 h-10 hidden md:block "
+        className="cursur absolute bg-white rounded-full w-10 h-10 hidden md:block"
         style={{
           left: `${cursorPosition.x}px`,
           top: `${cursorPosition.y}px`,
           transform: "translate(-50%, -50%)",
         }}
       />
-      <img
+      <motion.img
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+          type: "spring",
+          stiffness: 50,
+          damping: 10,
+        }}
         src="/images/name-logo.svg"
         alt="logo images"
         className="absolute w-[80vw] md:w-[40vw]"
       />
       <div className="container flex justify-between items-center z-30">
         <div className="right_hero">
-          <h1 className="text-4xl font-semibold md:text-7xl text-white">
+          {/* Motion heading */}
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={lineVariants}
+            custom={0} // Line 1
+            viewport={{ root: scrollAnim }}
+            className="text-4xl font-semibold md:text-7xl text-white"
+          >
             Akash Biswas
-          </h1>
-          <p className="my-10 h-10 text-2xl w-max pr-1 text-golden font-semibold md:text-3xl md:font-normal">
+          </motion.h1>
+
+          {/* Motion paragraph */}
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            variants={lineVariants}
+            custom={1} // Line 2
+            viewport={{ root: scrollAnim }}
+            className="my-10 h-10 text-2xl w-max pr-1 text-golden font-semibold md:text-3xl md:font-normal"
+          >
             {typeEffect}
             <Cursor cursorStyle="|" />
-          </p>
-          <Button text={`About Me`} />
+          </motion.p>
+
+          {/* Button animation */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={lineVariants}
+            custom={2} // Line 3
+            viewport={{ root: scrollAnim }}
+          >
+            <Button text={`About Me`} />
+          </motion.div>
         </div>
 
-        <div className="social_icon flex flex-col gap-7 left_hero">
+        {/* Social icons animation */}
+        <motion.div
+          className="social_icon flex flex-col gap-7 left_hero"
+          initial="hidden"
+          animate="visible"
+          viewport={{ root: scrollAnim }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+        >
           {social.map((cur, index) => (
-            <a
-              href={cur.link}
+            <motion.a
               key={index}
+              href={cur.link}
               target="_blank"
               rel="noopener noreferrer"
+              variants={lineVariants}
+              custom={index} // Staggered animation for icons
               className="text-4xl text-grey hover:text-white duration-150 hover:scale-105"
             >
               {cur.icon}
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
       </div>
+
       <div className="lets_work_btn absolute bottom-10 flex flex-col items-center justify-center group">
         <Button text={`Latest Works`} />
         <FaArrowDownLong className="text-white text-3xl transform transition-transform duration-300 group-hover:scale-125 mt-3 w-max" />
