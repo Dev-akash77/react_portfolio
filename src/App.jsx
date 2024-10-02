@@ -4,6 +4,7 @@ import Home from './Pages/Home'
 import Project from './Pages/Project'
 import Skills from './Layout/Skills'
 import Technology from './Layout/Technology'
+import Services from './Pages/Services'
 const App = () => {
   return (
     <div className='bg-white'>
@@ -12,6 +13,7 @@ const App = () => {
       <Project />
       <Skills />
       <Technology />
+      <Services />
     </div>
   )
 }

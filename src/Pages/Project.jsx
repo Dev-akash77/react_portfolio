@@ -13,9 +13,14 @@ const Project = () => {
           {projects.map((cur, index) => {
             return (
               <motion.div
-              initial={{opacity:0,y:70}}
-              whileInView={{opacity:1, y:0}}
+              initial={
+                index % 2 === 0
+                  ? {opacity:0,y: -100, x: -100 }
+                  : {opacity:0,y: 100, x: 100 }
+              }
+              whileInView={{opacity:1,y:0,x:0}}
               transition={{duration:1}}
+              viewport={{ once: true }}
                 className="project_des gap-y-4 md:gap-0 grid grid-cols-1 md:grid-cols-2 md:grid-rows-1 mt-[2rem]"
                 key={cur.id}
               >

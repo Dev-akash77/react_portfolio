@@ -135,13 +135,13 @@ const Technology = () => {
 
   const perent = useRef(null);
   return (
-    <div className="cc mb-[10rem] mt-16">
+    <div className="cc mt-16">
       <div className="container">
         <h2 className="md:text-4xl text-3xl text-blue font-semibold cc">
           Technology We Know
         </h2>
         <div
-          className="technology_cart w-full bg-slate-100 md:py-16 py-5 px-5 rounded-lg mt-12 grid md:grid-cols-7 gap-5 grid-cols-3"
+          className="technology_cart w-full place-items-center bg-slate-100 md:py-16 py-5 px-5 rounded-lg mt-12 grid md:grid-cols-7 gap-5 grid-cols-3"
           ref={perent}
         >
           {all_tech.map((cur) => {
