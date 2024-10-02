@@ -16,27 +16,27 @@ const Home = () => {
     {
       name: "LinkedIn",
       icon: <FaLinkedinIn />,
-      link: "https://www.linkedin.com/in/your-profile", // add your link
+      link: "https://www.linkedin.com/in/akash-biswas-486435289/", 
     },
     {
       name: "Instagram",
       icon: <FaInstagram />,
-      link: "https://www.instagram.com/your-profile", // add your link
+      link: "https://www.instagram.com/developer_akash77/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D", 
     },
     {
       name: "Facebook",
       icon: <FaFacebook />,
-      link: "https://www.facebook.com/your-profile", // add your link
+      link: "https://www.facebook.com/profile.php?id=100044966861269", 
     },
     {
       name: "Email",
       icon: <MdOutlineMailOutline />,
-      link: "mailto:your-email@example.com", // add your email link
+      link: "akashrahul2006@gmail.com", 
     },
     {
       name: "Github",
       icon: <FaGithub />,
-      link: "https://github.com/Dev-akash77", // add your GitHub link
+      link: "https://github.com/Dev-akash77",
     },
   ];
 
@@ -171,7 +171,7 @@ const Home = () => {
           {social.map((cur, index) => (
             <motion.a
               key={index}
-              href={cur.link}
+              href={cur.name === "Email" ? `mailto:akashrahul2006@gmail.com` : cur.link}
               target="_blank"
               rel="noopener noreferrer"
               variants={lineVariants}
