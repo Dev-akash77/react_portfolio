@@ -10,28 +10,30 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { FaArrowDownLong } from "react-icons/fa6";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
+import About from "./About";
 
 const Home = () => {
+  const [showAbout, setShowAbout] = useState(false)
   const social = [
     {
       name: "LinkedIn",
       icon: <FaLinkedinIn />,
-      link: "https://www.linkedin.com/in/akash-biswas-486435289/", 
+      link: "https://www.linkedin.com/in/akash-biswas-486435289/",
     },
     {
       name: "Instagram",
       icon: <FaInstagram />,
-      link: "https://www.instagram.com/developer_akash77/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D", 
+      link: "https://www.instagram.com/developer_akash77/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
     },
     {
       name: "Facebook",
       icon: <FaFacebook />,
-      link: "https://www.facebook.com/profile.php?id=100044966861269", 
+      link: "https://www.facebook.com/profile.php?id=100044966861269",
     },
     {
       name: "Email",
       icon: <MdOutlineMailOutline />,
-      link: "akashrahul2006@gmail.com", 
+      link: "akashrahul2006@gmail.com",
     },
     {
       name: "Github",
@@ -148,6 +150,7 @@ const Home = () => {
             variants={lineVariants}
             custom={2} // Line 3
             viewport={{ root: scrollAnim }}
+            onClick={()=>{setShowAbout(!showAbout)}}
           >
             <Button text={`About Me`} />
           </motion.div>
@@ -171,7 +174,11 @@ const Home = () => {
           {social.map((cur, index) => (
             <motion.a
               key={index}
-              href={cur.name === "Email" ? `mailto:akashrahul2006@gmail.com` : cur.link}
+              href={
+                cur.name === "Email"
+                  ? `mailto:akashrahul2006@gmail.com`
+                  : cur.link
+              }
               target="_blank"
               rel="noopener noreferrer"
               variants={lineVariants}
@@ -188,6 +195,7 @@ const Home = () => {
         <Button text={`Latest Works`} />
         <FaArrowDownLong className="text-white text-3xl transform transition-transform duration-300 group-hover:scale-125 mt-3 w-max" />
       </div>
+      <About show={showAbout} setShow={setShowAbout}/>
     </div>
   );
 };

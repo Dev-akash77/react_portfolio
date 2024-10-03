@@ -15,7 +15,7 @@ html {
 } */
 html {
   scroll-behavior: smooth;
-} 
+}
 :root {
   --black: #000000; /* Dark primary color for text and backgrounds */
   --sub_black: #111111;
@@ -65,10 +65,15 @@ html {
 .cursur {
   width: 2rem;
   height: 2rem;
-  background-color:var(--blue);
+  background-color: var(--blue);
   border-radius: 50%;
   transition: 0.3s linear;
-  filter: blur(.2rem);
+  filter: blur(0.2rem);
+}
+.logo_cursor {
+  width: 2rem;
+  height: 2rem;
+  filter: blur(.3rem);
 }
 .second_col {
   grid-row: 1/2;
