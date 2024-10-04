@@ -54,7 +54,7 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="cc mt-6 mb-[10rem]">
+    <div className="cc mt-6">
       <div className="container">
         <h2 className="md:text-4xl text-3xl text-blue font-semibold cc">
           Services We Provide

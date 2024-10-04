@@ -182,3 +182,20 @@ html {
     width: 4rem;
   }
 }
+.testimonial_up{
+  position: relative;
+}
+.testimonial_up::after,.testimonial_up::before{
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color:  #ff1700;
+  right: 0;
+  bottom:-2rem;
+}
+.testimonial_up::after{
+  border-radius: 0px 24px 0px 0px;
+  background-color: #f1f5f9;
+  z-index: 222;
+}
