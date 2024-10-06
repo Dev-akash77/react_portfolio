@@ -19,7 +19,8 @@ html {
 :root {
   --black: #000000; /* Dark primary color for text and backgrounds */
   --sub_black: #111111;
-  --blue: #007bff; /* Bright blue for buttons and links */
+  --blue: #1788ae; /* Bright blue for buttons and links */
+  /* --blue: #007bff;  */
   --grey: #b0b2c3; /* Soft grey for subtle backgrounds and accents #909090 */
   --white: #fff; /* Clean white for backgrounds and light text */
   --orange: #ff6f61; /* Vibrant orange for highlights and hover effects */
@@ -190,7 +191,7 @@ html {
   position: absolute;
   width: 2rem;
   height: 2rem;
-  background-color:  #ff1700;
+  background-color:  #ff4424;
   right: 0;
   bottom:-2rem;
 }

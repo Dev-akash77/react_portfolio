@@ -150,7 +150,7 @@ const Home = () => {
             variants={lineVariants}
             custom={2} // Line 3
             viewport={{ root: scrollAnim }}
-            onClick={()=>{setShowAbout(!showAbout)}}
+            onClick={()=>{setShowAbout(true)}}
           >
             <Button text={`About Me`} />
           </motion.div>
