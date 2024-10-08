@@ -44,7 +44,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="mb-[10rem] mt-[5rem] cc">
+    <div className="mt-[5rem] cc">
       <div className="container md:mx-auto md:px-4">
         <h2 className="md:text-4xl text-3xl text-blue font-semibold text-center mb-10">
           What my clients are saying?

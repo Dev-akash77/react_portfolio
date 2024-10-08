@@ -32,7 +32,7 @@ const About = ({ show, setShow }) => {
         show ? `scale-100` : `scale-0`
       } transition-transform duration-500 ease-in-out overflow-hidden absolute z-50 bg-[rgba(0,0,0,.8)] w-full h-full cc`}
     >
-      <div className="about_cont w-[95%] md:w-[80%] h-[95%] bg-sub_black rounded-lg">
+      <div className="about_cont w-[95%] md:w-[80%] h-[90%] bg-sub_black rounded-lg">
         <div className="mt-2 w-[98%] flex justify-end">
           <div
             className="cursor-pointer p-2 rounded-full bg-slate-700 group"
