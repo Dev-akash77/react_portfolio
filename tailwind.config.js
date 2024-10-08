@@ -12,6 +12,10 @@ export default {
         golden: "var(--golden)",
         sub_black: "var(--sub_black)",
       },
+      fontFamily: {
+        ubuntu: ['Ubuntu', 'sans-serif'], // Ubuntu font
+        worksans: ['Work Sans', 'sans-serif'], // Work Sans font
+      },
     },
   },
   plugins: [],
