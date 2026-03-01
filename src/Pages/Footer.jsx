@@ -33,7 +33,7 @@ const Footer = () => {
   return (
     <div className="mt-[5rem] bg-black text-white cc py-8">
       <div className="container">
-        <p className="text-sm cc">Akash Biswas @ 2024</p>
+        <p className="text-sm cc">Akash Biswas @ 2026</p>
         <div className="cc mt-2">
           <img src="./images/name-logo-white.svg" alt="our a logo" />
         </div>
